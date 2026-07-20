@@ -181,9 +181,7 @@
     <string name="help_event">Los \"eventos\" representan sucesos breves (instantáneos) en su dispositivo o de forma remota. 
 \nPor ejemplo, recibir una notificación o escanear una etiqueta NFC. 
 \nConsulte el <a href="https://github.com/renyuneyun/Easer/wiki">documento</a> para obtener más información.</string>
-    <string name="help_profile">El \"perfil\" es un conjunto de operaciones. Cada operación representa un tipo particular de acción.
-\nPor ejemplo, activar el Bluetooth o enviar un SMS.
-\nConsulta este <a href="https://github.com/renyuneyun/Easer/wiki"> documento </a> para obtener más información.</string>
+    <string name="help_profile">El \"perfil\" es un conjunto de operaciones. Cada operación representa un tipo particular de acción.\nPor ejemplo, activar el Bluetooth o enviar un SMS.\nConsulta este <a href="https://github.com/renyuneyun/Easer/wiki">documento</a> para obtener más información.</string>
     <string name="category_operation_android">Android</string>
     <string name="category_operation_system_config">Configuración de sistema</string>
     <string name="category_operation_easer">\@string/easer</string>
