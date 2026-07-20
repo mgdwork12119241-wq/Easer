@@ -12,7 +12,7 @@
     <string name="ringer_mode_dnd_all">Todo</string>
     <string name="operation_alarm">Fijar alarma</string>
     <string name="operation_rotation">Autorotación</string>
-    <string name="usource_cell_location">Ubicación por SIM</string>
+    <string name="usource_cell_location">Ubicación de Móvil</string>
     <string name="ringer_mode_dnd_none">Ninguno</string>
     <string name="event_nfc_tag__prompt_wait_for_tag">Esperando al escaneo de etiqueta…</string>
     <string name="broadcast_data">Datos</string>
@@ -46,7 +46,7 @@
     <string name="event_tcp_trip">Viaje de TCP</string>
     <string name="op_car_mode">Modo coche</string>
     <string name="indicator_when">Cuando…</string>
-    <string name="usource_cell_location_no_signal">No se pudo obtener la ubicación de la célula SIM. Comprueba tu señal.</string>
+    <string name="usource_cell_location_no_signal">No puedo obtener la ubicación del móvil. Comprueba tu señal.</string>
     <string name="o_http_url">URL</string>
     <string name="event_nfc_tag__dynamics_tag_id">ID de etiqueta</string>
     <string name="obroadcast_l_data">Datos:</string>
@@ -161,7 +161,7 @@
     <string name="exact_timer">Temporizador exacto\?</string>
     <string name="event_widget__dynamics_widget_id">ID de widget</string>
     <string name="operation_broadcast">Enviar transmisión</string>
-    <string name="usource_cell_location_dynamics_cell_location">Ubicación por SIM</string>
+    <string name="usource_cell_location_dynamics_cell_location">Ubicación del móvil</string>
     <string name="text_extras">Extras</string>
     <string name="minutes">Minutos</string>
     <string name="operation_http_request">Petición HTTP</string>
@@ -236,7 +236,7 @@
     <string name="bluetooth_maybe_not_supported">Este perfil de Easer usa un método que no es oficialmente soportado por Android. Puede que no funcione el todos los dispositivos.</string>
     <string name="o_play_media_loop">Recorre los medios</string>
     <string name="o_play_media_repeat_times">Número de repeticiones</string>
-    <string name="operation_wireguard">WireGuard Cliente VPN</string>
+    <string name="operation_wireguard">WireGuard</string>
     <string name="o_wireguard__set_tunnel_state">Establecer el estado del túnel</string>
     <string name="o_wireguard_tunnel_name">Nombre del Túnel</string>
     <string name="o_wireguard_tunnel_name_hint">Nombre del Túnel en Wireguard</string>
