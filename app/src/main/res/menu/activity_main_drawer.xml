@@ -6,6 +6,9 @@
             android:id="@+id/nav_outline"
             android:title="@string/title_outline" />
         <item
+            android:id="@+id/nav_ready_automations"
+            android:title="أتمتات جاهزة" />
+        <item
             android:id="@+id/nav_pivot"
             android:title="@string/title_pivot" />
         <item
