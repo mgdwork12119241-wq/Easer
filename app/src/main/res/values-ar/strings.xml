@@ -1,2 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="easer">أتمتة</string>
+    <string name="app_name" translatable="false">@string/easer</string>
+    <string name="drawer_tip">خلّي حياتك أسهل بالأتمتة.</string>
+    <string name="title_outline">نظرة عامة</string>
+    <string name="title_pivot">المحور</string>
+    <string name="title_data_collection">البيانات</string>
+    <string name="title_operation">الإجراءات</string>
+    <string name="title_profile">الملف</string>
+    <string name="title_event">الحدث</string>
+    <string name="title_script">السيناريو</string>
+    <string name="title_condition">الشرط</string>
+    <string name="title_application">التطبيق</string>
+    <string name="title_activity_history">سجل النشاط</string>
+    <string name="title_about">حول التطبيق</string>
+    <string name="title_setting">الإعدادات</string>
+    <string name="title_add">إضافة</string>
+    <string name="title_add_child">إضافة عنصر فرعي</string>
+    <string name="title_edit">تعديل</string>
+    <string name="title_delete">حذف</string>
+    <string name="title_edit_event">تعديل الحدث</string>
+    <string name="title_edit_condition">تعديل الشرط</string>
+    <string name="title_edit_profile">تعديل الملف</string>
+    <string name="title_edit_script">تعديل السيناريو</string>
+    <string name="title_select_operation">اختر إجراءً</string>
+    <string name="title_select_event">اختر حدثاً</string>
+    <string name="title_select_condition">اختر شرطاً</string>
+    <string name="title_choose_predecessors">اختر العناصر السابقة</string>
+    <string name="title_dynamics_link">رابط ديناميكي</string>
+    <string name="title_new_dynamics_link">رابط ديناميكي جديد</string>
+    <string name="title_trigger_profile">تشغيل هذا الملف</string>
+    <string name="title_source">كود المصدر</string>
+    <string name="title_author">المطور</string>
+    <string name="title_donate">دعم المشروع</string>
+    <string name="title_website">الموقع</string>
+    <string name="title_homepage">الصفحة الرئيسية</string>
+    <string name="title_service_start">بدء الخدمة</string>
+    <string name="title_remote_operation_plugin">إضافة إجراءات عن بُعد</string>
+    <string name="menu_start">بدء</string>
+    <string name="menu_stop">إيقاف</string>
+    <string name="menu_action_save">حفظ</string>
+    <string name="menu_clear">مسح</string>
+    <string name="service_indicator_positive">يعمل</string>
+    <string name="service_indicator_negative">متوقف</string>
+    <string name="activity_history__profile">@string/title_profile</string>
+    <string name="activity_history__script">@string/title_script</string>
+    <string name="activity_history__time">الوقت</string>
+    <string name="activity_history__extra">معلومات إضافية</string>
+    <string name="activity_history__satisfaction">الحالة</string>
+    <string name="activity_history__satisfied">تم بنجاح</string>
+    <string name="activity_history__unsatisfied">لم ينجح</string>
+    <string name="activity_history__service">الخدمة</string>
+    <string name="activity_history__status">الحالة</string>
+    <string name="activity_history__start">بدء</string>
+    <string name="activity_history__stop">إيقاف</string>
+    <string name="null_content">محتوى فارغ</string>
+    <string name="navigation_drawer_open">فتح القائمة الجانبية</string>
+    <string name="navigation_drawer_close">إغلاق القائمة الجانبية</string>
+    <string name="button_read_next_time">قراءة لاحقاً</string>
+    <string name="button_understand">فهمت</string>
+    <string name="button_cancel">إلغاء</string>
+    <string name="button_ok">موافق</string>
+    <string name="text_lack_permission">بعض المهارات لا تملك الصلاحيات الكافية.</string>
+    <string name="button_see_detail">عرض التفاصيل</string>
+    <string name="text_notification_running_indicator_content">%s يعمل في الخلفية</string>
+    <string name="text_predecessor_nodes">العناصر السابقة</string>
+    <string name="text_profile">الملف</string>
+    <string name="text_predefined_event">حدث جاهز</string>
+    <string name="text_inline_event">حدث مضمّن</string>
+    <string name="text_use_condition">استخدام شرط</string>
+    <string name="text_repeatable_desc">متكرر</string>
+    <string name="text_reverse_desc">سيناريو عكسي</string>
+    <string name="text_volatile">مؤقت</string>
+    <string name="text_persistent">دائم</string>
+    <string name="text_unknown_skill">[مهارة غير معروفة]</string>
+    <string name="text_dynamics">ديناميكي</string>
+    <string name="text_placeholder">عنصر نائب</string>
+    <string name="toggle_active">مفعّل</string>
+    <string name="hint_event_title">اسم الحدث</string>
+    <string name="hint_script_title">اسم السيناريو</string>
+    <string name="hint_profile_title">اسم الملف</string>
+    <string name="hint_condition_title">اسم الشرط</string>
+    <string name="prompt_save_failed">تعذر الحفظ</string>
+    <string name="prompt_delete">هل أنت متأكد أنك تريد حذف %s؟</string>
+    <string name="prompt_delete_failed">تعذر الحذف. تحقق مما إذا كان هذا العنصر مستخدماً.</string>
+    <string name="prompt_data_illegal">تعذر حفظ البيانات بسبب حقول غير صالحة. يرجى مراجعة اختياراتك ومدخلاتك.</string>
+    <string name="prompt_data_clash">فشل حفظ البيانات. يرجى التحقق من عدم تكرار الاسم.</string>
+    <string name="prompt_data_save_io_exception">حدث خطأ في التخزين. ربما مساحة التخزين ممتلئة؟</string>
+    <string name="prompt_dynamics_not_ready">لإعداد الديناميكية، اختر ملفاً صالحاً ومشغلاً صالحاً مثل حدث.</string>
+    <string name="prompt_prevented_for_permission">امنح أتمتة صلاحية &lt;%s&gt; حتى تعمل هذه الوظيفة.</string>
+    <string name="prompt_error_logged">سجّلت أتمتة خطأ. راجع مجلد error داخل مجلد السجلات.</string>
+    <string name="text_app_description">أتمتة المهام الروتينية على جهازك لتجعل حياتك أسهل.
+
+اربط الأحداث المختلفة ودع الإجراءات المرتبطة بها تُنفّذ تلقائياً. لم تعد بحاجة إلى تذكّرها!
+
+هذا التطبيق مستوحى من آلية الملفات في CyanogenMod ومن IFTTT، وتم توسيعه ليستخدم في الأتمتة العامة.</string>
+    <string name="title_about_developer">نبذة عن المطور</string>
+    <string name="about_developer_name">مجد</string>
+    <string name="about_developer_description">مطور المشروع وصاحب نسخة أتمتة.</string>
+    <string name="text_license">هذا البرنامج حر ومفتوح المصدر، ويمكن إعادة توزيعه وتعديله وفق شروط رخصة GNU GPL الإصدار الثالث أو أي إصدار لاحق.</string>
+    <string name="pref_category_functionality">الوظائف</string>
+    <string name="pref_category_personalise">التخصيص</string>
+    <string name="pref_category_data_manage">إدارة البيانات</string>
+    <string name="pref_category_service">الخدمة</string>
+    <string name="pref_autostart_title">التشغيل التلقائي</string>
+    <string name="pref_autostart_summary">تشغيل أتمتة في الخلفية عند تشغيل الجهاز.</string>
+    <string name="pref_restart_after_upgrade_title">تشغيل الخدمة بعد التحديث</string>
+    <string name="pref_welcome_title">إظهار رسالة الترحيب</string>
+    <string name="pref_welcome_summary">إظهار رسالة الترحيب عند فتح التطبيق.</string>
+    <string name="pref_logging_title">تفعيل السجل الخارجي</string>
+    <string name="pref_logging_summary">حفظ السجلات في وحدة التخزين الخارجية للمساعدة في تقارير الأخطاء.</string>
+    <string name="pref_use_root_title">استخدام صلاحيات Root</string>
+    <string name="pref_use_root_summary">استخدام صلاحيات Root لبعض الوظائف لتحسين التوافق مع بعض الأجهزة.</string>
+    <string name="pref_cooldown_title">الحدث مرة واحدة كل…</string>
+    <string name="pref_cooldown_summary">الفترة بالثواني التي تُعامل فيها التكرارات كحدث واحد.</string>
+    <string name="cooldown_time_illformed">الرقم كبير جداً أو ليس رقماً صحيحاً موجباً.</string>
+    <string name="pref_enabled_skills_title">المهارات المفعّلة</string>
+    <string name="pref_enabled_skills_summary">تفعيل أو تعطيل مهارات معينة.</string>
+    <string name="pref_use_12_hour_clock_title">استخدام نظام 12 ساعة</string>
+    <string name="pref_export_title">تصدير</string>
+    <string name="pref_export_summary">تصدير جميع الأحداث والملفات إلى بطاقة SD.</string>
+    <string name="pref_import_title">استيراد</string>
+    <string name="pref_import_summary">استيراد جميع الأحداث والملفات من ملف ZIP.</string>
+    <string name="pref_convert_data_title">تحويل البيانات</string>
+    <string name="pref_convert_data_summary">تحويل جميع البيانات إلى الصيغة الموصى بها.</string>
+    <string name="pref_show_notification_title">إظهار الإشعار</string>
+    <string name="pref_show_notification_summary">إظهار إشعار في شريط الإشعارات.</string>
+    <string name="pref_foreground_title">تشغيل الخدمة في المقدمة</string>
+    <string name="pref_foreground_summary">تقليل احتمال إيقاف النظام للخدمة. سيظهر إشعار أثناء التشغيل.</string>
+    <string name="pref_locale_custom">لغة مخصصة</string>
+    <string name="message_skill_not_compatible">هذا الجهاز لا يستطيع تشغيل هذه المهارة.</string>
+    <string name="message_convert_data_start">جارٍ تحويل البيانات.</string>
+    <string name="message_convert_data_finish">تم تحويل البيانات.</string>
+    <string name="message_convert_data_abort">تم إلغاء تحويل البيانات.</string>
+    <string name="message_convert_data_error">تعذر تحويل البيانات. راجع السجل لمعرفة التفاصيل.</string>
+    <string name="title_welcome_message">مرحباً</string>
+    <string name="welcome_message_1">مرحباً بك في أتمتة.
+
+إليك بعض المعلومات الأساسية قبل الاستخدام.</string>
+    <string name="welcome_message_2">تحتوي أتمتة على عدة وحدات توفر وظائف مختلفة. يمكنك تفعيلها أو تعطيلها من الإعدادات.
+
+يجب منح الصلاحيات المطلوبة لكل وحدة مفعّلة قبل استخدامها.</string>
+    <string name="welcome_message_3">تُبنى السيناريوهات على شكل مخططات مترابطة من خلال اختيار العناصر السابقة.
+
+بشكل مبسط: تُطبّق علاقة AND بين العناصر السابقة، وعلاقة OR بين المسارات المختلفة.</string>
+    <string name="title_welcome_message_privacy">الخصوصية</string>
+    <string name="welcome_message_privacy">الخصوصية مهمة!
+
+أتمتة برنامج حر ومفتوح المصدر، ويمكن للجميع فحصه وتعديله ومشاركته.
+
+بياناتك تبقى على جهازك وفق تصميم التطبيق.</string>
+    <string name="alert_update_storage_data_title">تم العثور على إصدار قديم من البيانات</string>
+    <string name="alert_update_storage_data">اختر تحويل البيانات من الإعدادات لتحديثها إلى الصيغة الجديدة.</string>
+    <string name="message_future_change_title">تغيير قادم</string>
+    <string name="message_future_change_0_8">سيتم إزالة عرض الشجرة للسيناريوهات في إصدار مستقبلي.</string>
+    <string name="template_export">تم التصدير إلى %s</string>
+    <string name="version">الإصدار</string>
+    <string name="message_importing_invalid_data">هذا الملف لا يبدو صالحاً. تأكد من استيراد ملف صادر من أتمتة.</string>
+    <string name="dynamics_time">الوقت الحالي</string>
+    <string name="dynamics_date">التاريخ الحالي</string>
+    <string name="dynamics_script_name">اسم السيناريو</string>
+    <string name="dynamics_profile_name">اسم الملف</string>
+    <string name="title_help">المساعدة</string>
+    <string name="help_script">السيناريوهات هي حاويات للمنطق. اربط حدثاً أو شرطاً بملف حتى تعرف أتمتة متى تشغّل ذلك الملف.</string>
+    <string name="help_event">الأحداث تمثل وقوعاً فورياً على جهازك، مثل وصول إشعار أو قراءة بطاقة NFC.</string>
+    <string name="help_condition">الشرط يمثل حالة مستمرة نسبياً على جهازك، مثل الاتصال بشبكة Wi-Fi أو إطفاء الشاشة.</string>
+    <string name="help_profile">الملف هو مجموعة من الإجراءات. كل إجراء يمثل نوعاً معيناً من المهام، مثل تشغيل Bluetooth أو إرسال رسالة SMS.</string>
+    <string name="category_operation_android">Android</string>
+    <string name="category_operation_system_config">إعدادات النظام</string>
+    <string name="category_operation_easer">@string/easer</string>
+    <string name="category_operation_misc">متنوع</string>
+    <string name="category_operation_unknown">غير معروف</string>
+</resources>
