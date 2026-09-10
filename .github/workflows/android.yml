@@ -13,37 +13,47 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Set up JDK 17 for Android SDK tools
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Install required Android Build Tools
+
+    - name: Install required Android SDK packages
       run: |
         yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
-        "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "build-tools;29.0.3"
+        "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-29" "build-tools;29.0.3"
+        test -f "$ANDROID_HOME/platforms/android-29/android.jar"
+        test -f "$ANDROID_HOME/build-tools/29.0.3/aapt"
+
     - name: Set up JDK 11 for Gradle 6.5
       uses: actions/setup-java@v4
       with:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+
     - name: Build debug APK
       run: ./gradlew assembleDebug
-    - name: Locate built APK
+
+    - name: Locate debug APK
       run: |
-        find app/build/outputs -type f -name '*.apk' -print
-        APK=$(find app/build/outputs -type f -name '*.apk' | head -n 1)
+        APK=$(find app/build/outputs/apk -type f -name '*.apk' | head -n 1)
         test -n "$APK"
         cp "$APK" Easer-experimental.apk
+        echo "APK=$APK"
+
     - name: Upload experimental APK
       uses: actions/upload-artifact@v4
       with:
         name: Easer-experimental-apk
         path: Easer-experimental.apk
         if-no-files-found: error
+
     - name: Package experimental ZIP
       run: |
         mkdir -p experimental-release
@@ -51,6 +61,7 @@ jobs:
         cp README.md experimental-release/README.md || true
         cd experimental-release
         zip -r ../Easer-experimental.zip .
+
     - name: Upload experimental ZIP
       uses: actions/upload-artifact@v4
       with:
