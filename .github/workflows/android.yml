@@ -13,30 +13,41 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK 17
+    - name: Set up JDK 17 for Android SDK tools
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
     - name: Install required Android Build Tools
       run: |
         yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
         "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "build-tools;29.0.3"
+    - name: Set up JDK 11 for Gradle 6.5
+      uses: actions/setup-java@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: gradle
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build debug APK
       run: ./gradlew assembleDebug
+    - name: Locate built APK
+      run: |
+        find app/build/outputs -type f -name '*.apk' -print
+        APK=$(find app/build/outputs -type f -name '*.apk' | head -n 1)
+        test -n "$APK"
+        cp "$APK" Easer-experimental.apk
     - name: Upload experimental APK
       uses: actions/upload-artifact@v4
       with:
         name: Easer-experimental-apk
-        path: app/build/outputs/apk/debug/app-debug.apk
+        path: Easer-experimental.apk
         if-no-files-found: error
     - name: Package experimental ZIP
       run: |
         mkdir -p experimental-release
-        cp app/build/outputs/apk/debug/app-debug.apk experimental-release/Easer-experimental.apk
+        cp Easer-experimental.apk experimental-release/Easer-experimental.apk
         cp README.md experimental-release/README.md || true
         cd experimental-release
         zip -r ../Easer-experimental.zip .
@@ -53,10 +64,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK 17
+    - name: Set up JDK 11 for Gradle 6.5
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '11'
         distribution: 'temurin'
         cache: gradle
     - name: Generate unit test coverage report
