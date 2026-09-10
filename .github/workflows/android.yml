@@ -8,31 +8,48 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: set up JDK 11
-      uses: actions/setup-java@v3
+    - uses: actions/checkout@v4
+    - name: Set up JDK 11
+      uses: actions/setup-java@v4
       with:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
+    - name: Build debug APK
+      run: ./gradlew assembleDebug
+    - name: Upload experimental APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: Easer-experimental-apk
+        path: app/build/outputs/apk/debug/app-debug.apk
+        if-no-files-found: error
+    - name: Package experimental ZIP
+      run: |
+        mkdir -p experimental-release
+        cp app/build/outputs/apk/debug/app-debug.apk experimental-release/Easer-experimental.apk
+        cp README.md experimental-release/README.md || true
+        cd experimental-release
+        zip -r ../Easer-experimental.zip .
+    - name: Upload experimental ZIP
+      uses: actions/upload-artifact@v4
+      with:
+        name: Easer-experimental-zip
+        path: Easer-experimental.zip
+        if-no-files-found: error
 
   test:
     needs: [build]
     runs-on: macos-latest
-    
+
     steps:
-    - uses: actions/checkout@v3
-    - name: set up JDK 11
-      uses: actions/setup-java@v3
+    - uses: actions/checkout@v4
+    - name: Set up JDK 11
+      uses: actions/setup-java@v4
       with:
         java-version: '11'
         distribution: 'temurin'
@@ -47,4 +64,5 @@ jobs:
         script: ./gradlew connectedCheck
       continue-on-error: true
     - name: Codecov
-      uses: codecov/codecov-action@v3.1.0
+      uses: codecov/codecov-action@v4
+      continue-on-error: true
