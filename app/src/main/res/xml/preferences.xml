@@ -98,6 +98,11 @@
     <PreferenceCategory android:layout="@layout/pref_divider" />
 
     <Preference
+        android:key="developer_info"
+        android:title="@string/title_about_developer"
+        android:summary="@string/about_developer_name" />
+
+    <Preference
         android:enabled="false"
         android:key="@string/key_pref_version"
         android:title="@string/version" />
