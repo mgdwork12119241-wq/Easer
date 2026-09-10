@@ -54,6 +54,7 @@ public class MainActivity extends CommonBaseActivity
     }
 
     private static final String FRAGMENT_OUTLINE = "ryey.easer.FRAGMENT.OUTLINE";
+    private static final String FRAGMENT_READY_AUTOMATIONS = "ryey.easer.FRAGMENT.READY_AUTOMATIONS";
     private static final String FRAGMENT_PIVOT = "ryey.easer.FRAGMENT.PIVOT";
     private static final String FRAGMENT_DATA = "ryey.easer.FRAGMENT.DATA";
     private static final String FRAGMENT_LOG = "ryey.easer.FRAGMENT.LOG";
@@ -123,7 +124,7 @@ public class MainActivity extends CommonBaseActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            getSupportFragmentManager().popBackStack(0, 0); // The -1'st is the Outline. We rely on super.onBackPressed() to pop the 0th.
+            getSupportFragmentManager().popBackStack(0, 0);
             NavigationView navigationView = findViewById(R.id.nav_view);
             navigationView.setCheckedItem(R.id.nav_outline);
             super.onBackPressed();
@@ -151,6 +152,14 @@ public class MainActivity extends CommonBaseActivity
             fragment = manager.findFragmentByTag(tag);
             if (fragment == null)
                 fragment = new OutlineFragment();
+            manager.beginTransaction()
+                    .replace(R.id.content_main, fragment, tag)
+                    .addToBackStack(bs_tag)
+                    .commit();
+        } else if (id == R.id.nav_ready_automations) {
+            fragment = manager.findFragmentByTag(tag);
+            if (fragment == null)
+                fragment = new ReadyAutomationsFragment();
             manager.beginTransaction()
                     .replace(R.id.content_main, fragment, tag)
                     .addToBackStack(bs_tag)
@@ -191,12 +200,14 @@ public class MainActivity extends CommonBaseActivity
     private static class NavTag {
         private static final int[] nav_ids = {
                 R.id.nav_outline,
+                R.id.nav_ready_automations,
                 R.id.nav_pivot,
                 R.id.nav_data,
                 R.id.nav_log,
         };
         private static final String[] fragment_tags = {
                 FRAGMENT_OUTLINE,
+                FRAGMENT_READY_AUTOMATIONS,
                 FRAGMENT_PIVOT,
                 FRAGMENT_DATA,
                 FRAGMENT_LOG,
